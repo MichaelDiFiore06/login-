@@ -1,6 +1,6 @@
-m = peripheral.wrap("right")
- 
 m.clear()
+ 
+m = peripheral.wrap("right")
  
 m.setTextScale(1)
  
@@ -14,10 +14,46 @@ m.write("Username:")
 m.setCursorPos(1,5)
 m.write("Password:")
  
+ 
 message = io.read()
- 
 m.setCursorPos(13,3)
- 
 m.write(message)
- 
 m.write("")
+ 
+ 
+message = io.read()
+m.setCursorPos(13,5)
+m.write(message)
+m.write("")
+ 
+ 
+message = io.read()
+m.setCursorPos(13,6)
+m.write(message)
+m.write("")
+ 
+m.clear()
+ 
+m.setTextScale(1)
+ 
+m.setCursorPos(1,2)
+m.write("deposit")
+ 
+ 
+m.setCursorPos(1,4)
+m.write("withdraw")
+ 
+m.setCursorPos(13.2)
+m.write(message)
+m.write("")
+ 
+m.setCursorPos(13,4)
+m.write(message)
+m.write("")
+ 
+m.clear()
+
+
+
+
+
