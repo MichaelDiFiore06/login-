@@ -25,12 +25,7 @@ message = io.read()
 m.setCursorPos(13,5)
 m.write(message)
 m.write("")
- 
- 
-message = io.read()
-m.setCursorPos(13,6)
-m.write(message)
-m.write("")
+
  
 m.clear()
  
