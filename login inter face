@@ -1,4 +1,39 @@
-local password = 1234
+function yes()
+m.clear()
+end
+ 
+function part2()
+ 
+local deposit = "yes"
+ 
+m.clear()
+ 
+m = peripheral.wrap("right")
+ 
+m.setTextScale(1)
+ 
+m.setCursorPos(1,5)
+m.write("deposit")
+ 
+m.setCursorPos(1,10)
+m.write("withdraw")
+ 
+mesage = io.read()
+m.setCursorPos(13,5)
+m.write(message)
+m.write("")
+ 
+if message == deposit then
+yes()
+end  
+ 
+m.setCursorPos(13,10)
+m.write(message)
+m.write("")
+end
+ 
+--this code will be the the login inter face for dimand finachal--
+local pasword = "1234"-- this will be a password for a spacific person --
  
 m = peripheral.wrap("right")
  
@@ -8,42 +43,19 @@ m.setTextScale(1)
  
 m.setTextColor(1)
 m.setCursorPos(11,1)
-m.write("Welcome")
+m.write("Welcome")--this page will be the first this you see no the moniter--
  
 m.setCursorPos(1,3)
 m.write("Password:")
  
  
-message = io.read()
+message = io.read()-- this peace of code will alow to wright your passwaord--
 m.setCursorPos(13,3)
 m.write(message)
 m.write("")
  
-if(message)=="1234"then
-m.open (deposit withdraw)
-end
- 
-local function (deposit withdraw)
-m.clear()
- 
-m.setTextScale(1)
- 
-m.setCursorPos(1,2)
-m.write("deposit")
- 
- 
-m.setCursorPos(1,4)
-m.write("withdraw")
- 
-m.setCursorPos(13.2)
-m.write(message)
-m.write("")
- 
-m.setCursorPos(13,4)
-m.write(message)
-m.write("")
- 
-m.clear()
+if message == pasword then-- this part of the code will chec to see if it is the right password--
+part2()
 end
 
 
