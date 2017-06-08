@@ -1,35 +1,43 @@
-function yes()
+m = peripheral.wrap("right")
+ 
+function yes()-- this code will bring you to a differint screen if you say yes
+ 
 m.clear()
+ 
+m.setTextScale(1)
+ 
+m.setCursorPos(13,1)
+m.write("welcome")
 end
  
-function part2()
+function part2()--this code will show up if you tipe in the right password
  
 local deposit = "yes"
  
 m.clear()
  
-m = peripheral.wrap("right")
- 
-m.setTextScale(1)
- 
-m.setCursorPos(1,5)
+m.setCursorPos(1,2)
 m.write("deposit")
  
-m.setCursorPos(1,10)
+m.setCursorPos(1,5)
 m.write("withdraw")
  
-mesage = io.read()
+message = io.read()
+m.setCursorPos(13,2)
+m.write(message)
+m.write("")
+ 
+message = io.read()
 m.setCursorPos(13,5)
 m.write(message)
 m.write("")
  
-if message == deposit then
+if message == deposit then-- if you tipe yes then it will bring you to a different screen 
 yes()
-end  
  
-m.setCursorPos(13,10)
-m.write(message)
-m.write("")
+end
+ 
+ 
 end
  
 --this code will be the the login inter face for dimand finachal--
@@ -57,8 +65,3 @@ m.write("")
 if message == pasword then-- this part of the code will chec to see if it is the right password--
 part2()
 end
-
-
-
-
-
